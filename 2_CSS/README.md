@@ -337,3 +337,82 @@ font: font-style font-variant font-weight font-size/line-height font-family;
 - blur : 그림자의 흐려짐 정도.(양수값 : 모든 방향으로 번짐, 음수값 : 모든방향으로 축소)
 - color : 그림자의 색상.(기본값 : 현재 글자색)
 
+## white-space
+
+- 여러 개의 공백을 처리하는 방법을 지정하는 속성
+
+```css
+선택자{
+    white-space : normal or nowrap or pre or pre-line or pre-wrap;
+}
+```
+
+- nomal : 여러 개의 공백을 하나로 표시(기본값)
+- nowrap : 여러 개의 공백을 하나로 표시, 영역을 넘어가는 내용은 줄바꾸지 않고 한 줄로 표시
+- pre : 여러개의 공백을 그대로 표시, 영역을 넘어가는 내용은 자동으로 줄 바꿔 표시
+- pre-line : 여러개의 공백을 하나로 표시, 영역을 넘어가는 내용은 자동으로 줄 바꿔 표시
+- pre-wrap : 여러 개의 공백을 그대로 표시, 영역을 넘어가는 내용은 자동으로 줄 바꿔 표시
+
+## letter-spacing
+
+- 글자와 글자 사이의 간격을 조정하는 속성
+
+```css
+선택자 {
+    letter-spacing: nomal or 크기;
+}
+```
+
+## word-spacing
+
+- 단어와 단어 사의 간격을 조정하는 속성
+
+```css
+선택자 {
+    word-spacing: normal or 크기
+}
+```
+
+## text-align
+
+- 문장을 정렬하는 속성
+
+```css
+선택자 {
+    text-align: left or right or center or justify;
+}
+```
+
+## text-indent
+
+- 문장을 들여쓰기 하는 속성
+
+```css
+선택자 {
+    text-indent: 숫자(단위);
+}
+```
+
+## line-height
+
+- 문장의 줄 간격을 조정하는 속성
+
+```css
+선택자{
+    line-height: normal or 숫자(단위);
+}
+```
+
+## text-overflow
+
+- 영역을 벗어나는 텍스트에 대한 상태를 지정하는 속성
+
+```css
+선택자 {
+    text-overflow: clip or ellipsis;
+}
+```
+
+- clip : 영역을 넘어가는 텍스트를 자른다.
+- ellipsis : 말 줄임으로 잘린 텍스트를 표현한다.
+

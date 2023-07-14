@@ -124,3 +124,65 @@
     0px -15px 15px orangered, 
     0px -22px 20px red;
 }
+
+/* white-space */
+#whs{
+    border: 1px solid;
+    width: 200px;
+    white-space: normal;
+    white-space: nowrap;
+    white-space: pre;
+    white-space: pre-line;
+    white-space: pre-wrap;
+}
+
+/* letter-spacing */
+#ls{
+    letter-spacing: 10px;
+    letter-spacing: 1.2rem;
+}
+
+/* word-spacing */
+#ws {
+    word-spacing: 20px;
+    word-spacing: 2rem;
+}
+
+/* text-align */
+#ta1{
+    text-align: left;
+}
+#ta2{
+    text-align: right;
+}
+#ta3{
+    text-align: center;
+}
+#ta4{
+    text-align: justify;
+}
+
+/* text-indent */
+#ti{
+    text-indent: 20px;
+}
+
+/* line-height */
+#lh {
+    line-height: 50px;
+}
+
+/* text-overflow */
+#textBox p {
+    border: 1px solid;
+    white-space: nowrap;
+    width: 80%;
+    overflow: hidden;
+}
+#textBox .clipText {
+    text-overflow: clip;
+}
+
+#textBox .ellipsis {
+    text-overflow:ellipsis;
+}

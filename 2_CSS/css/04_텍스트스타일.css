@@ -1,0 +1,126 @@
+/* font-family */
+#ff1 {
+    font-family:궁서체;
+}
+#ff2 {
+    font-family:고딕체;
+}
+#ff3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#ff4 {
+    font-family: 'VT323', monospace;
+}
+
+/* font-size */
+#fs {
+    font-size: 16px; /* 부모의 사이즈에 따라 계속 변경(em, %) */
+}
+#fs1 {
+    font-size: 30px;
+}
+#fs2 {
+    font-size: 2em; 
+}
+#fs3 {
+    font-size: 2rem; /* 16 *2 = 32px*/
+}
+#fs4 {
+    font-size: 150%;
+}
+
+/* font-weight */
+#fw1 {
+    font-weight: 900; /*bold;*/
+}
+#fw2 {
+    font-weight: 100; /*bolder;*/
+}
+#fw3 {
+    font-weight: lighter;
+}
+
+/* font-style */
+#fs5 {
+    font-style: italic;
+}
+#fs6 {
+    font-style: oblique;
+}
+
+/* font-variant */
+#fv {
+    font-variant: small-caps;
+}
+
+/* font */
+#font1 {
+    font: 2rem 'VT323';
+}
+/* 이탤릭체, 각자의 글씨체, 글자 크기 32px, small-caps, 글자 굵기는 bold, line-height :2 */
+#font2 {
+    font: italic small-caps 32px/2 'VT323';
+}
+
+/* color */
+#c-name {
+    color: aqua;
+}
+#c-16 {
+    color: #dd882e;
+}
+#c-rgb {
+    color: rgb(68, 223, 78);
+    color: rgba(68, 223, 78, 0.45); /* 마지막 기입 숫자 투명도*/
+}
+#c-hsl {
+    color: hsl(200, 50%, 50%); /* 색상값, 채도, 명도 */
+    color: hsla(200, 50%, 50%, 0.8);
+}
+
+/* text-decoration */
+#td1 {
+    text-decoration: underline;
+}
+#td2 {
+    text-decoration: line-through;
+}
+#td3 {
+    text-decoration: overline;
+}
+#td4 {
+    text-decoration: none;
+    color:red;
+}
+
+/* text-transform */
+#tt1 {
+    text-transform:uppercase;
+}
+#tt2 {
+    text-transform:lowercase;
+}
+#tt3 {
+    text-transform:capitalize;
+}
+
+/* text-shadow */
+.shadow {
+    font-size: 50px;
+    font-weight: 900;
+}
+#ts1{
+    color: orangered;
+    text-shadow:-5px -5px 5px yellow;
+}
+#ts2{
+    color: white;
+    text-shadow:0px 0px 10px yellowgreen;
+}
+#ts3 {
+    text-shadow: 0px 0px 4px gray,
+    0px -5px 4px yellow, 
+    0px -10px 8px orange,
+    0px -15px 15px orangered, 
+    0px -22px 20px red;
+}

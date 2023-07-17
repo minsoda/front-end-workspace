@@ -1,0 +1,205 @@
+/* 박스 모델 */
+/* width, height */
+.size-test {
+    height: 200px;
+    background-color: darksalmon;
+}
+#fixed-size {
+    width: 200px;
+}
+#variable-size {
+    width: 50%;
+}
+
+/* display */
+.display {
+    background-color: antiquewhite;
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+}
+.display-inline {
+    display: inline;
+}
+.display-block {
+    display: block;
+}
+.display-inline-block {
+    display: inline-block;
+}
+
+/* padding, margin */
+.sapce {
+    width: 100px;
+    height: 100px;
+    background-color: beige;
+}
+#padding1 {
+    padding: 30px;
+}
+#padding2 {
+    padding-top: 50px;
+    padding-right: 100px;
+    /* 50px : 위아래, 30px : 좌우 */
+    padding: 50px 30px;
+    /* 위, 우, 아래, 좌 */
+    padding: 30px 50px 20px 40px;
+}
+#margin1 {
+    /* 바깥쪽 여백*/
+    margin: 50px;
+}
+/* *겹쳐질경우 큰값만 적용됨. */
+#margin2 {
+    margin-top: 70px;
+    margin-left: 20px;
+    /* 50 : 위아래 30 : 좌우 */
+    margin: 50px 30px;
+    margin: 30px 50px 20px 40px;
+}
+
+/* 테두리 스타일 */
+.border {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border: 10px solid;
+}
+#border1 {
+    border-style: dashed;
+}
+#border2 {
+    border-style: dotted;
+    border-color: hotpink;
+    border-color: hotpink yellow;
+    border-color: hotpink yellow greenyellow red;
+    border-top-color: hotpink;
+    border-right-color: yellow;
+    border-bottom-color: greenyellow;
+    border-left-color: red;
+}
+#border3 {
+    border-style: double;
+    border-color: red;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 10px 20px;
+    border-radius: 30px;
+}
+#border4 {
+    border-width: 20px;
+    border-width: 20px 30px;
+    border-width: 20px 30px 10px 40px;
+    border-left-width: thick;
+    border-right-width: thin;
+}
+
+/* 포지셔닝 */
+/* box-sizing */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+    margin: 10px;
+    /* padding 따로 들어가서 140px */
+    padding: 20px;
+}
+#box1 {
+    box-sizing: content-box;
+}
+#box2 {
+    /* 100px */
+    box-sizing: border-box;
+}
+
+/* float */
+.float {
+    width: 100px;
+    height: 100px;
+    background-color: darksalmon;
+    margin: 2px;
+    /* display: inline-block; */
+    float: left;
+
+}
+
+/* position */
+#outer {
+    position: relative;
+    /* 부모가 relative로 있으면 안으로 감 */
+    width: 300px;
+    height: 300px;
+    background-color: lightgoldenrodyellow;
+}
+#first {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 200px;
+    height: 200px;
+    background-color: limegreen;
+
+}
+#second {
+    position: absolute;
+    /* 부모에게 갈수있음 */
+    top: 100px;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    
+}
+#fixed {
+    position: fixed;
+    top: 100px;
+    left: 500px;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+/* visibility */
+.visibility {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+}
+#visibility1 {
+    background-color: beige;
+}
+#visibility2 {
+    visibility: hidden;
+    /* display: none; */
+    /* 공간(display)도 사라짐 */
+    background-color: skyblue;
+}
+#visibility3 {
+    background-color: lightpink;
+}
+
+/* z-index */
+#z-outer {
+    height: 250px;
+    position: relative;
+}
+.z-index {
+    width: 150px;
+    height: 100px;
+    position: absolute;
+}
+#z-index1 {
+    top: 100px;
+    left: 100px;
+    background-color: orange;
+    z-index: 3;
+}
+#z-index2 {
+    top: 50px;
+    left: 50px;
+    background-color: blueviolet;
+    z-index: 999;
+    /* 아에 큰숫자로 지정해서 맨위로 올리기도 함 */
+}
+#z-index3 {
+    background-color: green;
+}

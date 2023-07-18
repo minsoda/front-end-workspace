@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리</title>
+    <!-- 작업하기 전에 reset 필요
+    <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/07_미디어쿼리.css">
+</head>
+<body>
+    <h2>레이아웃1 : inline-block</h2>
+    <div class="container" id="container-1">
+    <section class="item item-style-1 item-inline-block">
+        <h3>Section 1</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, debitis incidunt. Deserunt saepe sed hic ad atque ab fugit soluta distinctio, libero, corporis veritatis, placeat iusto quam consequuntur! Accusantium, dolor.</p>
+    </section><section class="item item-style-2 item-inline-block">
+        <h3>Section 2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quaerat atque nostrum accusamus maiores at vel quam. Tenetur neque voluptatem optio, eius odit, ut eveniet, quis suscipit id dicta esse!</p>
+    </section>
+</div>
+<footer>footer</footer>
+
+<h2>레이아웃 2 : float</h2>
+<div class="container" id="container-2">
+    <section class="item item-style-1 item-float">
+        <h3>Section 1</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, debitis incidunt. Deserunt saepe sed hic ad atque ab fugit soluta distinctio, libero, corporis veritatis, placeat iusto quam consequuntur! Accusantium, dolor.</p>
+    </section><section class="item item-style-2 item-float">
+        <h3>Section 2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quaerat atque nostrum accusamus maiores at vel quam. Tenetur neque voluptatem optio, eius odit, ut eveniet, quis suscipit id dicta esse!</p>
+    </section>
+    <!-- 이렇게 추가를 해야함! -->
+    <!-- <div style="clear:both"></div> -->
+</div>
+<footer>footer</footer>
+
+<h2>레이아웃 3 : 반응형 웹</h2>
+<div class="container" id="container-3">
+    <section class="item item-style-1 item-mediaquery">
+        <h3>Section 1</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, debitis incidunt. Deserunt saepe sed hic ad atque ab fugit soluta distinctio, libero, corporis veritatis, placeat iusto quam consequuntur! Accusantium, dolor.</p>
+    </section><section class="item item-style-2 item-mediaquery">
+        <h3>Section 2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quaerat atque nostrum accusamus maiores at vel quam. Tenetur neque voluptatem optio, eius odit, ut eveniet, quis suscipit id dicta esse!</p>
+    </section>
+</div>
+<footer>footer</footer>
+
+</body>
+</html>

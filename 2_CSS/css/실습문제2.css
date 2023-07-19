@@ -1,0 +1,139 @@
+header {
+    display: block;
+    background-color: black;
+    position: fixed;
+    width: 500px;
+    height: 100vh;
+    display: flex;
+    background-image: url('../../resources/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.header-blackbox {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+}
+
+.header-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    /* background-color: pink; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-content h1{
+    display: block;
+    font-size: 5rem;
+    color: white;
+    border-bottom: 2px solid white;
+    /* text-decoration: underline; 은 텍스트들의 간격 조절 못함*/
+    padding-bottom: 15px;
+
+}
+.header-content nav {
+    font-size: 2rem;
+}
+
+header nav a:hover {
+    color: pink;
+}
+
+.header-content nav a {
+    margin-bottom: 15px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+}
+
+main {
+    padding-left: 520px;
+}
+
+.main-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.main-content img {
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: 800px;
+    align-self: center;
+}
+
+.main-content p {
+    border: 2px solid pink;
+    line-height: 1.7;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+
+main section {
+    height: 100vh;
+}
+
+#section1 {
+    background-color: yellowgreen;
+
+}
+
+#section2 {
+
+    background-color: orange;
+   
+}
+
+#section3 {
+    background-color: violet;
+    
+}
+
+#section4 {
+    background-color: rebeccapurple;
+}
+
+#section5 {
+    background-color: palevioletred;
+}
+
+#top {
+    width: 10%;
+    height: 10%;
+    background-color: white;
+    border-radius: 50%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    
+}
+
+#top a{
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    color: violet;
+    justify-content: center;
+    align-items: center;
+}

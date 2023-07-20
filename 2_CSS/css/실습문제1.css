@@ -66,10 +66,6 @@ main section h2 {
 
 main section p {
     width: 50%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
     line-height: 1.4rem;
 }
 
@@ -80,7 +76,7 @@ main section p {
     border-radius: 50%;
     position: fixed;
     right: 0;
-    bottom: 0;
+    bottom: 0; 
     }
 
 #top a {

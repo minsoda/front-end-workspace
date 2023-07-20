@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+<body>
+    <h1>객체(Object)</h1>
+
+    <!-- 객체 생성 -->
+    <script>
+        // 방법 1 : 따로 하나씩 . 으로 설정
+        // const age = 12;
+        const person = {};
+        // const person2 = new Object(); 잘 안씀!
+
+        console.log(person);
+
+        person.name = 'aaa';
+        person.age = 9;
+        person.hello = function(){ // 익명함수를 사용해야함. name으로만 작성시 widow로 인식을 해서 this.name 이곳의 변수를 사용하겠다고 해줘야함!
+            console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`);
+        }
+
+        console.log(person);
+        person.hello();
+
+        console.log(window.name); // window 생략 가능.
+        // window.alert("!!!!");
+
+        // 방법 2 : 키에 모든 값들을 들어가는 방법
+        const person2 = { 
+            name: 'xxx',
+            age: 15,
+            hello : function(){
+            console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`);
+        }
+        }
+        person2.hello();
+
+    </script>
+
+    <!-- 생성자 함수 -->
+    <script>
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.hello = function(){
+                console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`);
+            }
+        }
+
+        const p1 = new Person('bbb', 2);
+        console.log(p1);
+        p1.hello();
+
+        //  or
+
+        function Person2(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        Person2.prototype.hello = function(){ 
+            // 한번만 생성 후 처음에만 호출 후 끝. 메모리 낭비를 막을 수 있음.(prototype, class일 경우)
+                console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`);
+            }
+            const p2 = new Person2('ccc', 3);
+            console.log(p2);
+            p2.hello();
+
+    </script>
+
+    <!-- 클래스 -->
+    <script>
+    class Person3 {
+        constructor(name, age){
+            this.name = name;
+            this.age = age;
+        }
+        hello(){
+            console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`);
+        }
+    }
+    const p3 = new Person3('ddd', 4);
+    console.log(p3);
+    p3.hello();
+
+    </script>
+</body>
+</html>

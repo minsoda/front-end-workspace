@@ -1,139 +1,90 @@
 header {
-    display: block;
-    background-color: black;
+    /* background-color:aquamarine; */
+    background-color: white;
+    /* 고정일경우! */
     position: fixed;
-    width: 500px;
-    height: 100vh;
-    display: flex;
-    background-image: url('../../resources/background.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.header-blackbox {
-    background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
-    height: 100%;
-}
-
-.header-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: white;
-    /* background-color: pink; */
-    width: 100%;
-    height: 100%;
+    height: 60px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+    line-height: 60px;
 }
 
-.header-content h1{
-    display: block;
-    font-size: 5rem;
-    color: white;
-    border-bottom: 2px solid white;
-    /* text-decoration: underline; 은 텍스트들의 간격 조절 못함*/
-    padding-bottom: 15px;
-
+header nav a {
+    margin-left: 35px;
+    text-decoration: none;
+    color: black;
+    line-height: 60px;
+    display: inline-block;
+    /* background-color: bisque; */
+    padding: 0 10px;
 }
-.header-content nav {
-    font-size: 2rem;
+
+header nav {
+    margin-right: 20px;
 }
 
 header nav a:hover {
-    color: pink;
-}
-
-.header-content nav a {
-    margin-bottom: 15px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    color: aliceblue;
+    color: tomato;
 }
 
 main {
-    padding-left: 520px;
+    padding-top: 60px;
 }
-
-.main-content {
-    padding: 20px;
+main section {
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.main-content h2 {
-    font-size: 2.4rem;
+main #section1 {
+    background-color: red;
+    
+}
+
+main #section2 {
+    background-color: purple;
+}
+
+main #section3 {
+    background-color: yellow;
+}
+
+main section h2 {
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-.main-content img {
-    width: 100%;
-    margin-bottom: 20px;
-    max-width: 800px;
-    align-self: center;
-}
-
-.main-content p {
-    border: 2px solid pink;
-    line-height: 1.7;
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    align-items: center;
-}
-
-
-main section {
-    height: 100vh;
-}
-
-#section1 {
-    background-color: yellowgreen;
-
-}
-
-#section2 {
-
-    background-color: orange;
-   
-}
-
-#section3 {
-    background-color: violet;
-    
-}
-
-#section4 {
-    background-color: rebeccapurple;
-}
-
-#section5 {
-    background-color: palevioletred;
+main section p {
+    width: 50%;
+    line-height: 1.4rem;
 }
 
 #top {
-    width: 10%;
-    height: 10%;
-    background-color: white;
+    width: 90px;
+    height: 90px;
+    background-color: black;
     border-radius: 50%;
     position: fixed;
     right: 0;
-    bottom: 0;
-    
-}
+    bottom: 0; 
+    }
 
-#top a{
-    font-size: 1rem;
+#top a {
+    text-decoration: none;
+    color: white;
     width: 100%;
     height: 100%;
-    text-decoration: none;
     display: flex;
-    color: violet;
     justify-content: center;
     align-items: center;
 }

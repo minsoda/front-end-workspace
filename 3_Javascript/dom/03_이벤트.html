@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+</head>
+<body>
+    <h1>이벤트</h1>
+
+    <nav>
+        <a href="#" class="menu">menu 1</a>
+        <a href="#" class="menu">menu 2</a>
+        <a href="#" class="menu">menu 3</a>
+    </nav>
+
+    <script>
+        let current;
+        const h1 = document.querySelector("h1");
+        const nav = document.querySelector("nav");
+        const menuList = document.querySelectorAll(".menu");
+
+        function clickHandler() {
+            this.style.backgroundColor = 'red';
+            console.log(this); // h1 눌렀을때 값.
+        }
+
+        function menuHandler(e) {
+            // e가 숨겨져있다.
+            // 그전에 선택한건 투명으로 
+            if(current){
+                current.style.backgroundColor = 'transparent';
+            }
+        
+        console.log(e);
+        console.log(e.target); // 접근되는거 확인가능
+
+        // 선택한건 컬러로 표시
+        e.target.style.backgroundColor = 'yellow';
+        current = e.target;
+        }
+
+        // 이벤트 이름 : click, 함수 : () 생략!! clickHandler
+        h1.addEventListener('click', clickHandler);
+        nav.addEventListener('click', menuHandler);
+
+
+
+    </script>
+</body>
+</html>

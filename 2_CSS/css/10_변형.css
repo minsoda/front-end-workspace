@@ -1,0 +1,141 @@
+.box-container {
+    border: 1px solid black;
+    height: 50vh;
+}
+
+#box-container1 {
+    /*flex하면 세로였던게 옆으로 퐉!*/
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(176, 96, 96, 0.8);
+    border: 2px solid black;
+    /* transform: scale(2); 기존의 값을 2배로 키워버림 */
+    /*부드러웡. 기존 all이라서 보통은 이렇게 한다*/
+    transition:1s;
+    /*커지고 느려지고 수정가능*/
+    transition: 0.5s linear;
+    transition-delay: 0.5s;
+}
+.box:hover {
+    background-color: rgba(158, 152, 235, 0.8);
+    transform: scale(2);
+
+    /*deg : 각도*/
+    transform: rotate(45deg); 
+    transform: skew(30deg);
+    transform: skewX(50deg);
+
+    /* 오늘쪽으로 옆으로 간당*/
+    transform: translateX(100px); 
+    transform: translate(50px, 100px);
+
+    transform: scale(1.5) rotate(30deg);
+
+    /*기준점 변경*/
+    transform-origin: left top; 
+    transform-origin: right bottom;
+}
+
+/* animation : 박스 안에서 오른쪽 -> 아래가기 */
+#box-container2 {
+    width: 1200px;
+    height: 600px;
+
+}
+
+.animation-box {
+    width: 200px;
+    height: 200px;
+    background-color: indigo;
+    color: white;
+    display: flex;
+    align-items: center; /*왼쪽 가운데*/
+    justify-content: center;/*가운데*/
+    font-size: 1.5rem;
+    animation: boxAni 2s linear infinite alternate-reverse; /*infinite : 반복 alternate : 다시 돌아옴*/
+    animation: boxAni 2s linear forwards; /* 끝까지 갔다가 멈춤*/
+}
+.animation-box:hover {
+    animation-play-state: paused;
+    /* 마우스로 잡으면 멈춤 */
+}
+
+@keyframes boxAni {
+    0% {
+        transform: translate(0, 0); /*명시하는거 추천*/
+        
+    }
+    50% {
+        transform: translate(1000px, 0); 
+    }
+    100% {
+        transform: translate(1000px, 400px); 
+    }
+}
+
+#box-container3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 원근감 : 값이 클수록 내쪽으로 */
+    /* perspective: 350px; */
+    
+}
+
+/*container3에 효과를 주는 album이 적용되는*/
+#box-container3:hover .album { 
+    transform: rotateY(181deg);
+}
+
+.album{
+    width: 200px;
+    height: 200px;
+
+    /* transform: perspective(400px) rotateY(-1deg); */
+    transform: rotateY(0deg);
+    transition: 3s;
+    position: relative;
+
+    /*뒷면 다른 이미지*/
+    transform-style: preserve-3d;
+
+    transform-origin: left;
+}
+
+.album-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.album-item-front {
+    background-image: url('../../resources/album2.jpg');
+    background-size: cover;
+    background-position: center;
+    backface-visibility: hidden;
+    z-index: 1;
+}
+
+.album-item-back {
+    background-color: thistle;
+
+    /* 글자 원상복귀 */
+    transform: rotateY(180deg);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+
+
+}

@@ -79,25 +79,25 @@ $('.wrap').find('span').css(style5);
 console.log($('.wrap2 h2').siblings());
 
 // h2 요소의 형제 요소들에 style3 적용
-$('h2').siblings().css(style3);
+$('.wrap2 h2').siblings().css(style3);
 
 // h2 요소의 형제 요소 중 p 요소에 style2 적용
-$('h2').siblings('p').css(style2);
+$('.wrap2 h2').siblings('p').css(style2);
 
 // h2 요소의 다음 형제 요소에 style1 적용
-$('h2').next().css(style1);
+$('.wrap2 h2').next().css(style1);
 
 // h2 요소의 다음에 오는 모든 형제 요소에 배경색: pink
-$('h2').next().nextAll().css('background-color','pink');
+$('.wrap2 h2').next().nextAll().css('background-color','pink');
 
 // h2 요소 이후부터 p요소 이전에 모든 형제 요소에 테두리 스타일 : dashed
-$('h2').next().nextUntil().css('border','dashed');
+$('.wrap2 h2').next().nextUntil().css('border','dashed');
 
 // h2 요소의 이전 형제 요소에 style5 적용
-$('h2').prev().css(style5);
+$('.wrap2 h2').prev().css(style5);
 
 // h2 요소의 이전에 오는 모든 형제 요소에 배경새 : moccasin
-$('h2').prevAll().css('background-color','moccasin');
+$('.wrap2 h2').prevAll().css('background-color','moccasin');
 
 // h2 요소 이전부터 p 요소 이후까지의 모든 형제 요소에 글자 크기 : 2rem
-$('h2').prevUntill('p').css('font-size', '2rem');
+$('.wrap2 h2').prevUntill('p').css('font-size', '2rem');

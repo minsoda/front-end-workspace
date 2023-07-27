@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        span {
+            display: inline-block;
+            text-align: center;
+            width: 80px;
+            font-weight: bold;
+        }
+
+        
+        #content1 {
+            width: 200px;
+            height: 200px;
+        }
+        
+        #submit input {
+            margin-left: 150px;
+            margin-top: 10px;
+        }
+        
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        hr {
+            border: 0.5px solid gray;
+            margin-top: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="insert.no" method="post">
+        <fieldset>
+        <legend>공지사항 작성하기</legend>
+
+        <div>
+        <span>제목</span>
+        <input type="text" name="title" placeholder="제목을 입력하시오.">
+    </div>
+
+    <div>
+        <span>내용</span>
+        <textarea name="content" id="content1" cols="30" rows="10" placeholder="내용을 입력하시오."></textarea>
+    </div>
+
+        <div>
+        <span>첨부파일</span>
+        <input type="file" name="uploadFile" id="file">
+    </div>
+
+    <div id="submit">
+        <input type="submit" value="작성하기">
+    </div>
+
+    </fieldset>
+    </form>
+
+    <hr>
+    <table border="1px">
+    <thead>
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>바로가기</th>
+            <th>작성자</th>
+            <th>작성일</th>
+            <th>조회수</th>
+        </tr>
+    </thead>
+
+    <tbody></tbody>
+
+    <tfoot></tfoot>
+
+</table>
+</body>
+</html>

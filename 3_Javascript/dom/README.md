@@ -306,4 +306,38 @@ const regExp = /패턴/플래그;
 - \s : 공백 문자를 의미 (띄어쓰기, 탭, 줄바꿈)
 - \S : 공백 문자가 아닌 문자를 의미
 
+# 효과(Effect)
 
+- HTML 문서 내에 애니메이션 효과를 만들기 위한 메소드의 집합을 Effect라 한다.
+
+## show/hide()
+
+- show() : 선택된 요소를 보여주는 메소드
+- hide() : 선택된 요소를 숨겨주는 메소드
+- toggle() : show, hide를 동시에 적용하는 메소드
+
+```js
+$('선택자').show/hide/toggle([시간], [구간별 속도], [callback])
+```
+
+## fade()
+
+- fadeIn() : 선택된 요소를 점점 진하게 보여주는 메소드
+- fadeOut() : 선택된 요소를 점점 희미하게 숨겨주는 메소드
+- fadeTo() : 선택된 요소를 설정한 값까지 희미해지는 효과를 주는 메소드
+- fadeToggle() : fadeIn, fadeOut을 동시에 적용하는 메소드
+
+```js
+$('선택자').fadeIn/fadeOut/fadeToggle([시간], [구간별 속도],[callback])
+$('선택자').fadeTo([시간],[투명도],[구간별 속도],[callback])
+```
+
+## slide()
+
+- slideDown() : 선택된 요소 위치에서 아래로 요소를 보여주는 메소드
+- slideup() : 선택된 요소를 위로 숨겨주는 메소드
+- slideToggle() : slideDown, slideUp을 동시에 적용하는 메소드
+
+```js
+$('선택자').slideDown/slideUp/slideToggle([시간],[구간별속도],[callback])
+```

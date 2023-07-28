@@ -1,0 +1,56 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+span {
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+  font-weight: bold;
+}
+
+#content1 {
+  width: 200px;
+  height: 200px;
+}
+#submit input {
+  margin-left: 150px;
+  margin-top: 10px;
+}
+div {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 5px;
+}
+hr {
+  border: 0.5px solid gray;
+  margin-top: 20px;
+}
+
+thead {
+  color: white;
+  background-color: blueviolet;
+  height: 40px;
+}
+
+tfoot {
+  color: white;
+  background-color: blueviolet;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.notice tr > th:nth-child(1) {
+  /* background-color: aquamarine; */
+  width: 40px;
+}
+.notice tr > th:nth-child(2) {
+  /* background-color: aqua; */
+  width: 500px;
+}
+.notice tr > th:nth-child(3) {
+  /* background-color: aquamarine; */
+  width: 60px;
+}

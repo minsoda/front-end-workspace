@@ -108,6 +108,34 @@ $('#textarea2').on('keyup', function(e){
 
     });
 
+    // 3) 아이디 조건 확인
+
+    $('#userId').on('keyup', function(e){
+
+        const regExp = /^[a-z][a-z0-9]{4,12}$/;
+        const id = $(e.target).val();
+
+        if(regExp.test($(e.target).val())){
+            
+            $('#idCheck').text('사용가능한 아이디입니다.').css('color','green');
+        } else if (id === ""){
+            $('#idCheck').text("");
+        }else { 
+            $('#idCheck').text('사용불가능한 아이디입니다.').css('color','red');
+
+        }
+    });
+
+    // 3. trigger() 메소드
+    $('#area3').on('click', function(e){
+        // 문자를 숫자로 바꾸는걸 변수로 담구 늘려주기!
+         let currentCount = parseInt($('#counter2').text());
+         $('#counter2').text(++currentCount);
+    });
+    $('#btn').on('click', function(){
+        // click 이벤트를 나도 할거야!! trigger()
+        $('#area3').trigger('click');
+    });
 
    
 

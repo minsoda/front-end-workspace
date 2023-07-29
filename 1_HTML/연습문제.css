@@ -1,29 +1,23 @@
-form {
-  display: flex;
-  flex-direction: column;
-}
-span {
-  display: inline-block;
-  text-align: center;
-  width: 80px;
-  font-weight: bold;
-}
-
-#content1 {
-  width: 200px;
-  height: 200px;
-}
-#submit input {
-  margin-left: 150px;
-  margin-top: 10px;
-}
 div {
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-items: center;
-  margin-bottom: 5px;
+  margin: 2px;
+  /* background-color: pink; */
 }
+div label {
+  /* background-color: red; */
+  display: block;
+  width: 70px;
+  text-align: center; 
+}
+
+#butn {
+  margin-left: 150px;
+  background-color: blue;
+}
+
 hr {
   border: 0.5px solid gray;
   margin-top: 20px;
@@ -31,26 +25,25 @@ hr {
 
 thead {
   color: white;
-  background-color: blueviolet;
-  height: 40px;
+  background-color: rgb(43, 150, 226);
+}
+tbody > tr > td:nth-child(3) {
+  /* background-color: red; */
+  width: 70px;
 }
 
+button {
+  /* background-color: white; */
+  width: 70px;
+}
+
+tbody > tr > td:nth-child(2) {
+  background-color: red;
+  width: 200px;
+}
 tfoot {
   color: white;
   background-color: blueviolet;
   font-size: 1rem;
   text-align: center;
-}
-
-.notice tr > th:nth-child(1) {
-  /* background-color: aquamarine; */
-  width: 40px;
-}
-.notice tr > th:nth-child(2) {
-  /* background-color: aqua; */
-  width: 500px;
-}
-.notice tr > th:nth-child(3) {
-  /* background-color: aquamarine; */
-  width: 60px;
 }

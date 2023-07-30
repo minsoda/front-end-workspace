@@ -1,21 +1,22 @@
 div {
   display: flex;
-  flex-direction: row;
-  justify-content: left;
+  /* flex-direction: row; */
+  /* justify-content: left; */
   align-items: center;
-  margin: 2px;
   /* background-color: pink; */
 }
-div label {
+label {
   /* background-color: red; */
-  display: block;
-  width: 70px;
+  /* display: inline-block; */
+  font-weight: bold;
+  width: 110px;
+  height: 30px;
   text-align: center; 
 }
 
 #butn {
   margin-left: 150px;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 hr {
@@ -32,13 +33,8 @@ tbody > tr > td:nth-child(3) {
   width: 70px;
 }
 
-button {
-  /* background-color: white; */
-  width: 70px;
-}
-
 tbody > tr > td:nth-child(2) {
-  background-color: red;
+  /* background-color: red; */
   width: 200px;
 }
 tfoot {

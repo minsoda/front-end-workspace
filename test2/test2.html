@@ -6,36 +6,35 @@
     <title>test2</title>
     <style>
       body {
-        width: 600px;
-        height: 300px;
-        padding: 30px;
-        border: 1px solid blue;
+        background-color: antiquewhite;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
       }
 
       div {
         display: flex;
-        border: 1px;
-        width: 350px;
-        border: 1px;
-        margin-left: 100px;
-        /* background-color: lightslategray; */
+        background-color: lightcyan;
+        height: 20px;
+        padding: 20px;
+      }
+
+      form {
+        border: 1px solid;
       }
 
       label {
-        display: block;
         width: 130px;
-        height: 20px;
-        margin: 5px;
-        margin-left: 10px;
-        margin-top: 20px;
+        height: 50px;
+        margin-left: 20px;
         font-weight: bold;
+        /* background-color: blueviolet; */
       }
 
       input {
-        /* background-color: aqua; */
-        margin-top: 10px;
-        border-style: hidden;
-        border-bottom-style: dotted;
+        background-color: lightcyan;
+        border: 0px;
+        border-bottom: 1px dashed;
       }
 
       button {
@@ -54,23 +53,26 @@
       <div>
         <label for="userId">아이디</label>
         <input type="text" id="userId" name="userId" required />
+        <div id="required_id"></div>
       </div>
 
       <div>
         <label for="password">패스워드</label>
         <input type="text" id="password" name="password" required />
+        <div id="required_password"></div>
       </div>
 
       <div>
         <label for="passwordCheck">패스워드 확인</label>
-
         <input type="text" id="passwordCheck" name="passwordCheck" required />
-        <!-- <span>영문자 대/소문자 특수문자, 숫자 포함 8~32자</span> -->
+        <div id="required_passwordCheck"></div>
       </div>
 
       <div>
-        <label for="email">이메일</label>
-        <input type="email" id="email1" name="email1" />
+        <label for="addr">이메일</label>
+        <input type="text" name="addr" class="email" />
+        <span>@</span>
+        <input type="text" name="addr2" class="email" />
       </div>
 
       <div>
@@ -85,14 +87,23 @@
       <script>
         const password = document.querySelector("#password");
         const check = document.querySelector("#but");
-        const regExp = /^[a-z][A-Z][~-#]{8,32}$/;
 
-        check.addEventListener("click", function () {
-          if (!regExp.test(password.val())) {
-            regExp.innerHTML += `영문자 대/소문자 특수문자, 숫자 포함 8~32자`;
-          } else {
-            regExp.innerHTML += `가입을 축하드립니다.`;
-          }
+        // function passwordcheck() {
+        //   const regExp = /^[!-~]{8,32}$/;
+        //   return regExp.test(password.value);
+        // }
+
+        // password.addEventListener("click", function () {
+        //   passwordcheck.innerHTML = "영문자아아아아";
+        // });
+
+        function passwordCheck() {
+          const regExp = /^[!-~]{8,32}$/;
+          return regExp.test(password.value);
+        }
+        password.addEventListener("click", function () {
+          passwordcheck.innerHTML =
+            "영문자 대/소문자 특수문자,숫자 포함 8~32자";
         });
       </script>
     </form>

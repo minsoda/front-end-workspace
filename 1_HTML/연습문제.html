@@ -1,101 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>연습문제</title>
-    <link rel="stylesheet" href="연습문제.css" />
-  </head>
-  <body>
-    <form action="insert.no" method="post">
-      <fieldset>
-        <legend>공지사항 작성하기</legend>
+<script>
+  const regExp = /^[\w\.]+@[a-z]+\.[a-z]+$/;
+  const regExp = /^[가-힣]{2,}$/;
+  const regExp = /^[!-~]{8,15}$/;
+  const regExp2 = /[!-/:-@[-`{-~]/;
+  const regExp = /^[a-zA-Z][a-zA-Z0-9]{3,11}$/;
 
-        <div>
-          <label for="title">제목</label>
-            <input type="text" id="title" placeholder="제목을 입력하세요.">
-        </div>  
-        
-        <div>
-          <label for="content">내용</label>
-          <textarea name="content" id="content" cols="22" rows="10" placeholder="내용을 입력하세요"></textarea>
-        </div>
-        
-        <div>
-          <label for="file">첨부파일</label>
-          <input type="file" id="file">
-        </div>
+  function userIdCheck() {
+    const regExp = /^[a-zA-Z][a-zA-Z0-9]{3,11}$/;
+    return regExp.test(userId.value);
+  }
 
-        <div>
-          <input id="butn" type="button" value="작성하기">
-        </div>
-      
-      </fieldset>
-    </form>
+  check.addEventListener("click", function () {
+    if (regExp.test(pno.value)) {
+      alert("정상입력!");
+    } else {
+      alert("잘못 입력!");
+    }
+  });
 
-    <hr />
-    <table border="1px" class="notice">
-      <thead>
-        <tr>
-          <th>번호</th>
-          <th colspan="2">제목</th>
-          <th>작성자</th>
-          <th>작성일</th>
-          <th>조회수</th>
-        </tr>
-      </thead>
+  $("#userId").on("keyup", function (e) {
+    const regExp = /^[a-z][a-z0-9]{4,12}$/;
+    const id = $(e.target).val();
 
-      <tbody>
-        <tr>
-          <td>9</td>
-          <td>공지사항 제목9</td>
-          <td><button type="submit" >바로가기</button></td>
-          <td>user01</td>
-          <td>2021-03-29</td>
-          <td>34</td>
-        </tr>
+    if (regExp.test($(e.target).val())) {
+      $("#idCheck").text("사용가능한 아이디입니다.").css("color", "green");
+    } else if (id === "") {
+      $("#idCheck").text("");
+    } else {
+      $("#idCheck").text("사용불가능한 아이디입니다.").css("color", "red");
+    }
+  });
+</script>
 
-        <tr>
-          <td>6</td>
-          <td>공지사항 제목6</td>
-          <td><button type="submit">바로가기</button></td>
-          <td>answ445</td>
-          <td>2021-03-12</td>
-          <td>1456</td>
-        </tr>
-
-        <tr>
-          <td>3</td>
-          <td>공지사항 제목3</td>
-          <td><button type="button">바로가기</button></td>
-          <td>ㅇㅇ</td>
-          <td>2021-00-00</td>
-          <td>674</td>
-        </tr>
-
-        <tr>
-          <td>2</td>
-          <td>공지사항 제목2</td>
-          <td><button type="submit">바로가기</button></td>
-          <td>ss</td>
-          <td>2022-00-00</td>
-          <td>6</td>
-        </tr>
-
-        <tr>
-          <td>1</td>
-          <td>공지사항 제목1</td>
-          <td><button type="submit">바로가기</button></td>
-          <td>ert</td>
-          <td>2020-00-00</td>
-          <td>65</td>
-        </tr>
-      </tbody>
-
-      <tfoot>
-        <td colspan="5">전체공지사항갯수</td>
-        <td colspan="2">5개</td>
-      </tfoot>
-    </table>
-  </body>
-</html>
+id : 태그를 구분하는 구분자로 사용하는 값으로 페이지내에서 유일한 값으로
+중복되면 안된다. class : 태그를 구분할수있는 구분자로 사용하는 값으로 페이지에서
+여러 태그에 중복해서 사용이 가능하다.
